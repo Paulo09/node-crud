@@ -1,1 +1,1 @@
-teste
+import fastify from "fastify";

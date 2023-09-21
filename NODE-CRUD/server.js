@@ -27,6 +27,7 @@ server.post('/produto',(req,res) => {
         preco: 1400,
     }
     db.adicionar(produto);
+    res.status(201).send(produto)
 })
 
 server.listen({

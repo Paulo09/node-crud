@@ -17,7 +17,10 @@ server.get('/', async (req, res) => {
 
 server.get('/produtos',(req,res)=>{
     let produtos = db.listarTodos();
-    return res.status(200).send(produtos);
+    return res.status(200).send({
+        size: produtos.length,
+        data: produtos
+    })
 })
 
 server.post('/produto',(req,res) => {

@@ -3,3 +3,7 @@ GET http://localhost:5000/produtos
 ###
 
 POST http://localhost:5000/produto
+
+###
+
+GET http://localhost:5000/produto/id

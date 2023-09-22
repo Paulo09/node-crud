@@ -6,7 +6,7 @@ export class DataBaseTemp{
 
     adicionar = (produto) => {      
         console.log('Produto_antes',produto)
-        
+
         // Add propriedade com ID Randomico
         produto.id = randomUUID();
 
@@ -16,6 +16,10 @@ export class DataBaseTemp{
 
     listarTodos = () => {
        return this.produtos;
+    }
+
+    listarPorId = (idParam) => {
+        return this.produtos.find(produto => produto.id === idParam)
     }
     
     atualizar = () => {

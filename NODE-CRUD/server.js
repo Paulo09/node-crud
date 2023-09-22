@@ -33,6 +33,13 @@ server.post('/produto',(req,res) => {
     res.status(201).send(produto)
 })
 
+
+server.get('/produto/:id',(req,res) => {
+    let idParam = req.params.id
+    let produto = db.listarPorId(idParam)
+    return res.status(200).send(produto);
+})
+
 server.listen({
     host,
     port   
